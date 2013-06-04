@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>{% if page.title %} {{ page.title }} | {% endif %} VANILLA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!--[if lte IE 8]>
+    {% css_asset_tag global %} - /_assets/css/baseline/classic-ie.scss{% endcss_asset_tag %}
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <script type="text/javascript">
+
+        if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+            document.write("{% css_asset_tag global %} - /_assets/css/baseline/modern.scss{% endcss_asset_tag %}");
+        }
+        else {
+            document.write("{% css_asset_tag global %} - /_assets/css/baseline/classic.scss{% endcss_asset_tag %}")
+        }
+
+    </script>
+    <noscript>
+        {% css_asset_tag global %} - /_assets/css/baseline/classic.scss{% endcss_asset_tag %}
+    </noscript>
+    <script type="text/javascript">
+        if (window.location.host.indexOf('{{url}}') > -1) {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-39759000-1', '{{url}}');
+            ga('send', 'pageview');
+        }
+    </script>
+<!--<![endif]-->
+
+</head>
+
+<body id="{{ page.id }}" class="{{ page.type }}">
+
+<header><div class="row" id="head"><div class="columnFull">
+
+        <h1 class="pageTitle">VANILLA</h1>
+
+</div></div></header>
+
+{{ content }}
+
+<section><div class="row sectionNav"><div class="columnFull">
+
+        <div class="menuHolder">
+            <a href="#nav" class="menu button">Menu<span></span></a>
+        </div>
+        
+        <nav role="navigation"><div class="nav">
+
+            <a href="index.html" class="navItem">Home</a>
+            <div class="navSub" tabIndex="0">
+                <span class="navItemLabel products">Products</span>
+                <div class="navSubList">
+                    <a href="product_page.html" class="navItem">Product Page</a>
+                </div>
+            </div>
+            <a href="about.html" class="navItem">About VANILLA</a>
+
+        </div></nav>
+
+</div></div></section>
+
+<section><div id="contact"><div class="row">
+
+        <h2 class="h2">Contact VANILLA</h2>
+
+        <div class="column">
+
+            <p>Tel: xxxx xxxxxx<br />
+            Mob: xxxx xxxxxx<br />
+            Fax: xxxx xxxxxx</p>
+
+            <p><a href="mailto:">Email: xxxx@VANILLA</a></p>
+
+        </div>
+
+        <div class="column">
+
+            <p>xx VANILLA Street</p>
+
+        </div>
+
+</div></div></section>
+
+<footer><div id="footer"><div class="row">
+
+        <div class="column">
+
+            <p>Registered Office: XXXX</p>
+
+        </div>
+
+        <div class="column">
+
+            <p>Reg No. xxxxxxxx<br />
+            VAT No. xxx xxxx xx</p>
+
+            <p>&copy; 2013 VANILLA</p>
+
+        </div>
+
+</div></div></footer>
+
+{% javascript_asset_tag global %}
+- /_assets/js/vendor/ender/ender.min.js
+- /_assets/js/module/nav.js
+- /_assets/js/module/responsive_images.js
+{% endjavascript_asset_tag %}
+
+</body>
+</html>

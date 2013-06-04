@@ -1,0 +1,28 @@
+ul.columnList {
+
+	padding-left: 50%;
+	width: 100%;
+
+	li {
+		list-style-position: inside;
+	}
+
+	li.col1 {
+		clear: left;
+		float: left;
+		margin-left: -50%;
+		width: 50%;
+	}
+
+	li.sub {
+		list-style-type: square;
+		padding-left: 5%;
+		margin-right: -5%;
+	}
+
+	li.col2 {
+		clear: none;
+		width: 50%;
+	}
+
+}

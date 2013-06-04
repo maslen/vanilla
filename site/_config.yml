@@ -1,0 +1,89 @@
+auto: true
+server: true
+type: contentPage
+#url: [[VANILLA]][[EXTENSION]]
+#baseurl: /[[VANILLA]]
+
+asset_pipeline:
+  compress: false
+  output_path: assets 
+
+# mini_magick:
+#     resp_96:
+#         source: _images/resp
+#         destination: img/96
+#         resize: "96x96"
+#     resp_130:
+#         source: _images/resp
+#         destination: img/130
+#         resize: "130x130"
+#     resp_165:
+#         source: _images/resp
+#         destination: img/165
+#         resize: "165x165"
+#     resp_200:
+#         source: _images/resp
+#         destination: img/200
+#         resize: "200x200"
+#     resp_235:
+#         source: _images/resp
+#         destination: img/235
+#         resize: "235x235"
+#     resp_270:
+#         source: _images/resp
+#         destination: img/270
+#         resize: "270x270"
+#     resp_304:
+#         source: _images/resp
+#         destination: img/304
+#         resize: "304x304"
+#     resp_340:
+#         source: _images/resp
+#         destination: img/340
+#         resize: "340x340"
+#     resp_375:
+#         source: _images/resp
+#         destination: img/375
+#         resize: "375x375"
+#     resp_410:
+#         source: _images/resp
+#         destination: img/410
+#         resize: "410x410"
+#     resp_445:
+#         source: _images/resp
+#         destination: img/445
+#         resize: "445x445"
+#     resp_485:
+#         source: _images/resp
+#         destination: img/485
+#         resize: "485x485"
+#     resp_520:
+#         source: _images/resp
+#         destination: img/520
+#         resize: "520x520"
+#     resp_555:
+#         source: _images/resp
+#         destination: img/555
+#         resize: "555x555"
+#     resp_590:
+#         source: _images/resp
+#         destination: img/590
+#         resize: "590x590"
+#     resp_625:
+#         source: _images/resp
+#         destination: img/625
+#         resize: "625x625"
+#     resp_660:
+#         source: _images/resp
+#         destination: img/660
+#         resize: "660x660"
+#     resp_695:
+#         source: _images/resp
+#         destination: img/695
+#         resize: "695x695"
+#     resp_736:
+#         source: _images/resp
+#         destination: img/736
+#         resize: "736x736"
+
+
