@@ -1,17 +1,14 @@
 /**
-	GENERAL BOOTSTRAP
+  general/bootstrap
 */
 
-@import "../site/defaults"; // user defined default overrides
+@if $classic {
 
-// --- BASELINE INCLUDES ---
+    @import "../../site/defaults"; // user defined default overrides
 
-@import "reset";
-@import "utils";
-@import "../typography/assaye/assaye";
-@import "../components/components";
+    @import "reset";
+    @import "../mixins/respond_min_max"
+    @import "../mixins/grid"
+    @import "../components/components";
 
-
-// --- SITE INCLUDES ---
-
-@import "../site";
+}
