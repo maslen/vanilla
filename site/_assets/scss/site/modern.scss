@@ -3,19 +3,22 @@
 */
 $modern: true;
 
-@import "classic";
+@import "classic.scss";
 
 /**
     GRID MODERN
 */
 
+.column--full {
+    @include twelveTwelths;
+}
 
 /*
     COMPACT: Modern mobiles
 */
 @include respondMinMax(320px, 639px) {
 
-    .row {
+    .section {
 
         .column {
 
@@ -24,14 +27,14 @@ $modern: true;
 
         }
 
-        .columnThin {
+        .column--thin {
 
             @include fourTwelths;
             float: left;
 
         }
 
-        .columnMicro {
+        .column--micro {
 
             @include sixTwelths;
             float: left;
@@ -47,16 +50,16 @@ $modern: true;
 */
 @include respondMinMax(480px, 639px) {
 
-    .row {
+    .section {
 
-        .columnMain {
+        .column--main {
 
             @include eightTwelths;
             float: left;
 
         }
 
-        .columnSide {
+        .column--side {
 
             @include fourTwelths;
             float: left;
@@ -72,7 +75,7 @@ $modern: true;
 */
 @include respondMinMax(640px, 959px) {
 
-    .row {
+    .section {
 
         .column {
 
@@ -81,28 +84,28 @@ $modern: true;
 
         }
 
-        .columnThin {
+        .column--thin {
 
             @include fourTwelths;
             float: left;
 
         }
 
-        .columnMicro {
+        .column--micro {
 
             @include threeTwelths;
             float: left;
 
         }
 
-        .columnMain {
+        .column--main {
 
             @include eightTwelths;
             float: left;
 
         }
 
-        .columnSide {
+        .column--side {
 
             @include fourTwelths;
             float: left;
@@ -118,7 +121,7 @@ $modern: true;
 */
 @include respondMinMax(950px, 1200px) {
 
-    .row {
+    .section {
 
         margin-left: auto;
         margin-right: auto;
@@ -131,28 +134,28 @@ $modern: true;
 
         }
 
-        .columnThin {
+        .column--thin {
 
             @include fourTwelths;
             float: left;
 
         }
 
-        .columnMicro {
+        .column--micro {
 
             @include threeTwelths;
             float: left;
 
         }
 
-        .columnMain {
+        .column--main {
 
             @include eightTwelths;
             float: left;
 
         }
 
-        .columnSide {
+        .column--side {
 
             @include fourTwelths;
             float: left;
@@ -168,7 +171,7 @@ $modern: true;
 */
 @include respondMinMax(1200px, false) {
 
-    .row {
+    .section {
 
         margin-left: auto;
         margin-right: auto;
@@ -181,28 +184,28 @@ $modern: true;
 
         }
 
-        .columnThin {
+        .column--thin {
 
             @include fourTwelths;
             float: left;
 
         }
 
-        .columnMicro {
+        .column--micro {
 
             @include threeTwelths;
             float: left;
 
         }
 
-        .columnMain {
+        .column--main {
 
             @include eightTwelths;
             float: left;
 
         }
 
-        .columnSide {
+        .column--side {
 
             @include fourTwelths;
             float: left;

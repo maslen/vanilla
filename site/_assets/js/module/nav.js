@@ -1,26 +1,27 @@
 !function() {
-    $('.menuHolder').on('click', function(e) {
-        $('body').toggleClass('navOpen');
+    $('.menu--holder').on('click', function(e) {
+        $('body').toggleClass('js-nav--open');
         if ($(e.target).hasClass('menu')) {
             return false;
         }
     });
 
-    $('.sectionNav').insertAfter('#head');
-    $('.sectionNav .menuHolder').insertAfter('#head .pageTitle');
+    $('.section--nav').insertAfter('.section--head');
+//    $('.sectionNav .menuHolder').insertAfter('#head .pageTitle');
+    $($('.section--head .site-title')[0].parentNode).append($('.section--nav .menu--holder'));
 
     var lastHoverOver = null,
         hovering = false,
         pauseCloseInProgress = false;
     function navSubToggle(e) {
-        $('.nav .navSub').toggleClass('navSubOpen');
+        $('.nav .nav--sub').toggleClass('js-nav--sub_open');
     }
     function navSubOpen(e) {
-        $('.nav .navSub').addClass('navSubOpen');
+        $('.nav .nav--sub').addClass('js-nav--sub_open');
         hovering = true;
     }
     function navSubClose() {
-        $('.nav .navSub').removeClass('navSubOpen');
+        $('.nav .nav--sub').removeClass('js-nav--sub_open');
     }
     function navSubPauseClose() {
         hovering = false;
@@ -34,10 +35,10 @@
             }, 1000);
         }
     }
-    $('.nav .navSub .navItemLabel').on('click', navSubToggle);
-    $('.nav .navSub .navItemLabel, .nav .navSub .navItem').on('mouseover', navSubOpen);
-    $('.nav .navSub').on('mouseout', navSubPauseClose);
-    $('.nav .navSub, .nav .navSub .navItem').on('focus', navSubOpen);
-    $('.nav .navSub, .nav .navSub .navItem').on('blur', navSubClose);
+    $('.nav .nav--sub .nav--item_label').on('click', navSubToggle);
+    $('.nav .nav--sub .nav--item_label, .nav .nav--sub .nav--item').on('mouseover', navSubOpen);
+    $('.nav .nav--sub').on('mouseout', navSubPauseClose);
+    $('.nav .nav--sub, .nav .nav--sub .nav--item').on('focus', navSubOpen);
+    $('.nav .nav--sub, .nav .nav--sub .nav--item').on('blur', navSubClose);
     $('body').on('focus', navSubClose);
 }();

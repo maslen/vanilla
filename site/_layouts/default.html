@@ -5,21 +5,21 @@
 <title>{% if page.title %} {{ page.title }} | {% endif %} VANILLA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <!--[if lte IE 8]>
-    {% css_asset_tag global %} - /_assets/css/baseline/classic-ie.scss{% endcss_asset_tag %}
+    {% css_asset_tag global %} - /_assets/scss/site/legacy-ie.scss{% endcss_asset_tag %}
 <![endif]-->
 <!--[if gt IE 8]><!-->
     <script type="text/javascript">
 
         if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-            document.write("{% css_asset_tag global %} - /_assets/css/baseline/modern.scss{% endcss_asset_tag %}");
+            document.write("{% css_asset_tag global %} - /_assets/scss/site/modern.scss{% endcss_asset_tag %}");
         }
         else {
-            document.write("{% css_asset_tag global %} - /_assets/css/baseline/classic.scss{% endcss_asset_tag %}")
+            document.write("{% css_asset_tag global %} - /_assets/scss/site/classic.scss{% endcss_asset_tag %}")
         }
 
     </script>
     <noscript>
-        {% css_asset_tag global %} - /_assets/css/baseline/classic.scss{% endcss_asset_tag %}
+        {% css_asset_tag global %} - /_assets/scss/site/classic.scss{% endcss_asset_tag %}
     </noscript>
     <script type="text/javascript">
         if (window.location.host.indexOf('{{url}}') > -1) {
@@ -37,36 +37,38 @@
 
 <body id="{{ page.id }}" class="{{ page.type }}">
 
-<header><div class="row" id="head"><div class="columnFull">
+<header><div class="section section--head" id="head"><div class="column--full">
 
-        <h1 class="pageTitle">VANILLA</h1>
+        <h1 class="site-title">VANILLA</h1>
+        <p class="byline">A starting point for all websites</p>
 
 </div></div></header>
 
 {{ content }}
 
-<section><div class="row sectionNav"><div class="columnFull">
+<section><div class="section section--nav"><div class="column--full">
 
-        <div class="menuHolder">
+        <div class="menu--holder">
             <a href="#nav" class="menu button">Menu<span></span></a>
         </div>
         
         <nav role="navigation"><div class="nav">
 
-            <a href="index.html" class="navItem">Home</a>
-            <div class="navSub" tabIndex="0">
-                <span class="navItemLabel products">Products</span>
-                <div class="navSubList">
-                    <a href="product_page.html" class="navItem">Product Page</a>
+            <a href="index.html" class="nav--item nav--item_home">Home</a>
+            <div class="nav--sub" tabIndex="0">
+                <span class="nav--item_label">Sub nav</span>
+                <div class="nav--list">
+                    <a href="product_page.html" class="nav--item nav--item_sub_item">Item</a>
                 </div>
             </div>
-            <a href="about.html" class="navItem">About VANILLA</a>
+            <a href="typography.html" class="nav--item nav--item_typography">Typography</a>
+            <a href="other_components.html" class="nav--item nav--item_other_components">Other Components</a>
 
         </div></nav>
 
 </div></div></section>
 
-<section><div id="contact"><div class="row">
+<section><div class="section section--contact">
 
         <h2 class="h2">Contact VANILLA</h2>
 
@@ -76,7 +78,7 @@
             Mob: xxxx xxxxxx<br />
             Fax: xxxx xxxxxx</p>
 
-            <p><a href="mailto:">Email: xxxx@VANILLA</a></p>
+            <p><a href="mailto:" class="button button--inline">Email: xxxx@VANILLA</a></p>
 
         </div>
 
@@ -86,9 +88,9 @@
 
         </div>
 
-</div></div></section>
+</div></section>
 
-<footer><div id="footer"><div class="row">
+<footer><div class="section section--footer">
 
         <div class="column">
 
@@ -105,7 +107,7 @@
 
         </div>
 
-</div></div></footer>
+</div></footer>
 
 {% javascript_asset_tag global %}
 - /_assets/js/vendor/ender/ender.min.js

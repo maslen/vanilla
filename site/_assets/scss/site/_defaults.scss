@@ -41,13 +41,20 @@
 
 
 // ====================================================================
+// STYLING
+// ====================================================================
+
+$typography:         assaye;
+$theme:              vanilla;
+
+// ====================================================================
 // PAGE COMPONENTS
 // ====================================================================
 
-$typography_component:      $true;
-$navigation_component:      $true;
-$button_component:          $true;
-$two_column_list_component: $true;
+$typography_component:      true;
+$navigation_component:      true;
+$button_component:          true;
+$two_column_list_component: true;
 
 
 // ====================================================================

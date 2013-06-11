@@ -4,6 +4,7 @@
 $classic: true;
 
 @import "../base/general/bootstrap";
+@import "nav_highlighting";
 
 /**
     GRID CLASSIC
@@ -23,18 +24,18 @@ $rowTopPadding: 0 !default;
     }
 }
 
-.row {
+.section {
 
     max-width: $maxPageWidth;
     overflow: hidden;
     padding-top: $rowTopPadding;
 
-    .columnFull,
     .column,
-    .columnThin,
-    .columnMicro,
-    .columnMain,
-    .columnSide {
+    .column--full,
+    .column--thin,
+    .column--micro,
+    .column--main,
+    .column--side {
 
         @include columnDefault;
 

@@ -1,0 +1,7 @@
+#home .nav--item_home,
+#typography .nav--item_typography,
+#other_components .nav--item_other_components,
+#sub_item .nav--item_sub_item,
+#sub_item .nav--sub .nav--item_label {
+  @include nav--item_selected;
+}

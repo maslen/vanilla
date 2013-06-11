@@ -13,7 +13,7 @@ module JekyllAssetPipeline
     end
 
     def convert
-      return Sass::Engine.new(@content, load_paths: ['.','_assets/css/baseline'], syntax: :scss).render
+      return Sass::Engine.new(@content, load_paths: ['.','_assets/scss/site'], syntax: :scss).render
     end
 
   end

@@ -1,0 +1,276 @@
+@mixin nav--item_selected {
+    background: #999;
+    color: #fff;
+}
+
+@if $navigation_component {
+
+    @if $classic {
+
+        .section--nav {
+
+            clear: left;
+            padding: 0;
+            text-transform: uppercase;
+
+            .menu {
+                display: none;
+            }
+
+            .nav--item_label {
+                padding: 1em;
+            }
+
+            a.menu:hover {
+                text-decoration: none;
+            }
+
+            .nav--item,
+            .nav--item_label {
+                color: #000;
+                display: block;
+                padding: 1em 1em 1em 2em;
+                text-decoration: none;
+            }
+
+            .nav--sub .nav--item {
+                margin-left: 1em;
+            }
+
+            .nav--item_label {
+                display: block;
+                padding-bottom: 1em;
+            }
+
+            .nav a:hover,
+            .nav--sub:hover .nav--item_label,
+            .nav--item:hover {
+                background: #ccc;
+                color: #333;
+            }
+
+        }
+
+    }
+
+    @if $modern {
+
+        @include respondMinMax(false, 639px) {
+
+            .js {
+
+                .menu--holder {
+
+                    margin: 1em 0 auto;
+
+                    .menu {
+                        display: block;
+                        margin-bottom: 1em;
+                        padding: 1em;
+                        position: relative;
+                    }
+
+                    .menu:hover {
+                        background: #eee;
+                    }
+
+                    .menu:active {
+                        background: #ddd;
+                    }
+
+                    .menu span {
+                        border-top: 5px solid transparent;
+                        border-right: 5px solid #000;
+                        border-bottom: 5px solid transparent;
+                        border-left: 5px solid transparent;
+                        display: block;
+                        position: absolute;
+                        right: 1em;
+                        top: 1em;
+                    }
+
+                }
+
+                .section--nav {
+
+                    clear: none;
+                    margin: 0;
+                    overflow: initial;
+                    position: relative;
+
+                    .nav {
+                        background: #fff;
+                        border-radius: 5px;
+                        left: 0;
+                        height: 0;
+                        margin: 0 1em 1em;
+                        position: absolute;
+                        overflow: hidden;
+                        right: 0;
+                        top: 0;
+                    }
+
+                }
+
+               .js-nav--open {
+
+                    .nav {
+                        border: 2px solid #999;
+                        border-radius: 5px;
+                        box-shadow: #ccc 3px 1px 5px, #ccc -3px 1px 5px, #ccc 0 3px 5px;
+                        clear: both;
+                        height: auto;
+                    }
+
+                    .menu {
+
+                        span {
+                            border-top: 5px solid #000;
+                            border-right: 5px solid transparent;
+                            border-bottom: 5px solid transparent;
+                            border-left: 5px solid transparent;
+                            margin-top: 2.5px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        @include respondMinMax(480px, 639px) {
+
+            .js {
+
+                .section--head {
+                    position: relative;
+                }
+
+                .menu--holder {
+
+                    position: absolute;
+                    right: 1em;
+                    top: 1em;
+                    text-align: center;
+                    width: 25%;
+
+                    .menu {
+                        padding: 1em 0;
+                    }
+                    
+                    .menu span {
+                        border-top: none;
+                        border-right: 0.5em solid transparent;
+                        border-bottom: 0.5em solid #000;
+                        border-left: 0.5em solid transparent;
+                        position: static;
+                        margin: 1em auto 0;
+                        width: 0;
+                    }
+
+                }
+
+                .js-nav--open {
+
+                    .nav {
+                        left: 50%;
+                    }
+
+                    .menu {
+
+                        span {
+                            border-top: 0.5em solid #000;
+                            border-right: 0.5em solid transparent;
+                            border-bottom: none;
+                            border-left: 0.5em solid transparent;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        @include respondMinMax(640px, false) {
+
+            .js .section--head {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .menu--holder {
+                display: none;
+            }
+
+            .nav {
+                background: #efefef;
+                float: left;
+//                width: 100%;
+            }
+
+            .section--nav {
+
+                .nav--item,
+                .nav--item_label {
+                    float: left;
+                    letter-spacing: 1px;
+                    padding-left: 1em;
+                }
+
+                .nav--sub {
+
+                    float: left;
+                    padding: 0;
+
+                    .nav--list {
+                        position: absolute;
+                        z-index: 10;
+                    }
+
+                    .nav--item,
+                    .nav--item_label {
+                        float: none;
+                    }
+
+                    .nav--item {
+                        background: white;
+                        height: 0;
+                        margin-left: 0;
+                        padding: 0 1em;
+                        overflow: hidden;
+                    }
+
+                }
+
+                .js-nav--sub_open .nav--item {
+                    height: auto;
+                    padding: 1em;
+                }
+
+            }
+
+        }
+
+        @include respondMinMax(840px, false) {
+
+            .section--nav {
+
+                .nav--item_label,
+                .nav--item {
+                    font-size: 0.9em;
+                    letter-spacing: 0;
+                    padding-left: 1em;
+                }
+
+            }
+
+        }
+
+    }
+
+}
