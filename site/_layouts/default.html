@@ -39,7 +39,11 @@
 
 <header><div class="section section--head" id="head"><div class="column--full">
 
+{% if page.id == "home" %}
         <h1 class="site-title">VANILLA</h1>
+{% else %}
+        <div class="site-title">VANILLA</div>
+{% endif %}
         <p class="byline">A starting point for all websites</p>
 
 </div></div></header>
