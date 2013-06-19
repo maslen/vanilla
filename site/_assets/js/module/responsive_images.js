@@ -15,7 +15,7 @@
             $('div.js-delayed_image_load').each(function(index, div) {
                 div = (typeof div !== "number") ? div : index; // get round jquery/ender differences?
                 var additional_classes = div.className.replace('js-delayed_image_load', '');
-                $(div).replaceWith('<img src="' + responsive_images.calc_img_src(div.getAttribute('data-src')) + '" class="js-image_replace ' + additional_classes + '" />');
+                $(div).replaceWith('<img src="' + responsive_images.calc_img_src(div.getAttribute('data-src'), div.clientWidth) + '" class="js-image_replace ' + additional_classes + '" />');
             });
         },
         /*
@@ -57,7 +57,7 @@
 
             if (!this.is_resizing) {
                 this.is_resizing = true;
-                
+
                 if (node_list !== null) { // reference error occurs when the user manually resizes the browser window (this prevents it) 
                     node_list.each(function(node) {
                         if (node.getAttribute('class').match('js-no_replace')) {
@@ -69,7 +69,7 @@
                             (node.getAttribute('datasrc') || node.src),
                             node.clientWidth
                         );
-                        if (!!newImgSrc) {
+                        if (!!newImgSrc && (node.src != newImgSrc)) {
                             node.src = newImgSrc;
                         }
                     });
